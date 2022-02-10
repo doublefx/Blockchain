@@ -1,12 +1,13 @@
-package com.doublefx.blockchain.example.virtualcoin;
+package com.doublefx.blockchain.example.common;
 
-import com.doublefx.blockchain.example.common.User;
+import com.doublefx.blockchain.example.virtualcoin.Transaction;
+import com.doublefx.blockchain.example.virtualcoin.VirtualCoinTransactionPool;
 
 import java.io.Serial;
 
 import static java.util.Optional.ofNullable;
 
-public class AccountHolder extends User {
+public final class AccountHolder extends User {
 	@Serial
 	private static final long serialVersionUID = 1L;
 

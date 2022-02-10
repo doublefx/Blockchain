@@ -24,7 +24,7 @@ public class Blockchain implements State<Blockchain.State> {
 	public static final Path blockchainPath = Path.of("blockchain.bin");
 
 	private static final int INITIAL_DIFFICULTY  = 0;
-	private static final int MAX_MINING_DURATION = 5000; // in milliseconds
+	private static final int MAX_MINING_DURATION = 3000; // in milliseconds
 
 	private static Blockchain INSTANCE;
 
@@ -57,7 +57,7 @@ public class Blockchain implements State<Blockchain.State> {
 			stateManager.save();
 
 			final var blockchainHelper = new BlockchainHelper();
-			proofOfWorkDifficulty = blockchainHelper.computeNextDifficulty(block, true);
+			proofOfWorkDifficulty = blockchainHelper.computeNextDifficulty(block, false);
 		}
 	}
 
@@ -166,6 +166,7 @@ public class Blockchain implements State<Blockchain.State> {
 				                        ? null
 				                        : blocks.get(i - 1);
 
+
 				if (!(block.isProven()
 				      && ofNullable(block.getHash()).isPresent()
 				      && isRoot || (ofNullable(latestBlock).isPresent()
@@ -179,5 +180,6 @@ public class Blockchain implements State<Blockchain.State> {
 
 			return isValid;
 		}
+
 	}
 }

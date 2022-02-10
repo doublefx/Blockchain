@@ -1,4 +1,4 @@
-package com.doublefx.blockchain.stage;
+package com.doublefx.blockchain.example;
 
 import com.doublefx.blockchain.example.chat.Babbler;
 import com.doublefx.blockchain.example.chat.ChatSystem;
@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 
 import static java.util.Optional.ofNullable;
 
-public class Stage4 {
+public class ChatSystemRunner {
 	private static final ChatSystem chatSystem = ChatSystem.getInstance();
 
 	public static void run() {

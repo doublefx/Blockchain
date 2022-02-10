@@ -1,5 +1,6 @@
 package com.doublefx.blockchain.example.chat;
 
+import com.doublefx.blockchain.example.common.ChatUser;
 import com.doublefx.blockchain.util.SynchronizedLinkedList;
 
 import java.util.LinkedHashSet;

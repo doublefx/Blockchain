@@ -1,11 +1,10 @@
 package com.doublefx.blockchain.example.virtualcoin;
 
 import com.doublefx.blockchain.component.Blockchain;
-import com.doublefx.blockchain.component.block.AbstractBlock;
 import com.doublefx.blockchain.component.block.Block;
 import com.doublefx.blockchain.component.block.BlockWithDifficultyInfo;
-import com.doublefx.blockchain.component.block.TransactionBlock;
 import com.doublefx.blockchain.component.mining.MiningService;
+import com.doublefx.blockchain.example.common.AccountHolder;
 import com.doublefx.blockchain.example.common.User;
 import com.doublefx.blockchain.example.virtualcoin.collector.BalanceCollector;
 import com.doublefx.blockchain.util.SynchronizedLinkedList;
@@ -20,6 +19,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
+import static com.doublefx.blockchain.component.block.AbstractBlock.ROOT_INITIAL_HASH;
 import static java.math.BigDecimal.ZERO;
 import static java.math.BigInteger.ONE;
 import static java.util.Optional.ofNullable;
@@ -62,7 +62,7 @@ public final class VirtualCoinTransactionPool extends Blockchain {
 	public void add(Transaction transaction) {
 		final var from       = transaction.from();
 		final var isMePaying = AccountHolder.getBlockchainUser().equals(from);
-		final var canAfford  = isMePaying || canAfford(transaction.from(), transaction.amount());
+		final var canAfford  = isMePaying || canAfford(from, transaction.amount());
 
 		if (canAfford) {
 			pendingTransactions.add(transaction);
@@ -107,7 +107,7 @@ public final class VirtualCoinTransactionPool extends Blockchain {
 
 			final var candidateBlock = new TransactionBlock(originalBlock.getId(),
 			                                                isRoot()
-			                                                ? AbstractBlock.ROOT_INITIAL_HASH
+			                                                ? ROOT_INITIAL_HASH
 			                                                : originalBlock.getPreviousHash(),
 			                                                transactions);
 

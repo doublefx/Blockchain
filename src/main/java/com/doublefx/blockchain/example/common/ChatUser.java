@@ -1,6 +1,7 @@
-package com.doublefx.blockchain.example.chat;
+package com.doublefx.blockchain.example.common;
 
-import com.doublefx.blockchain.example.common.User;
+import com.doublefx.blockchain.example.chat.ChatSystem;
+import com.doublefx.blockchain.example.chat.Message;
 
 import java.io.Serial;
 

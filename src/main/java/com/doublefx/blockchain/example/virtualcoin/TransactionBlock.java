@@ -1,8 +1,7 @@
-package com.doublefx.blockchain.component.block;
+package com.doublefx.blockchain.example.virtualcoin;
 
-import com.doublefx.blockchain.example.virtualcoin.AccountHolder;
-import com.doublefx.blockchain.example.virtualcoin.Transaction;
-import com.doublefx.blockchain.util.StringUtils;
+import com.doublefx.blockchain.component.block.AbstractBlock;
+import com.doublefx.blockchain.example.common.AccountHolder;
 
 import java.io.Serial;
 import java.math.BigDecimal;
@@ -12,7 +11,8 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import static com.doublefx.blockchain.example.chat.Message.NEW_LINE;
-import static com.doublefx.blockchain.example.virtualcoin.AccountHolder.getBlockchainUser;
+import static com.doublefx.blockchain.example.common.AccountHolder.getBlockchainUser;
+import static com.doublefx.blockchain.util.StringUtils.isNotBlank;
 import static java.math.BigDecimal.ZERO;
 import static java.math.BigInteger.ONE;
 import static java.util.Optional.ofNullable;
@@ -82,7 +82,7 @@ public class TransactionBlock extends AbstractBlock<Transaction> {
 	protected String formatData(List<Transaction> transactions) {
 		final var hasTransactions = ofNullable(transactions).isPresent() && !transactions.isEmpty();
 
-		String formattedTransactions = NO_TRANSACTIONS;
+		var formattedTransactions = NO_TRANSACTIONS;
 
 		if (hasTransactions) {
 			var data = transactions.stream()
@@ -90,7 +90,7 @@ public class TransactionBlock extends AbstractBlock<Transaction> {
 			                       .map(Transaction::toString)
 			                       .collect(joining(NEW_LINE));
 
-			if (StringUtils.isNotBlank(data)) {
+			if (isNotBlank(data)) {
 				formattedTransactions = NEW_LINE + data;
 			}
 		}

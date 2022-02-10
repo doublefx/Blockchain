@@ -1,12 +1,11 @@
 package com.doublefx.blockchain.example.chat;
 
-import com.doublefx.blockchain.example.common.User;
 import com.doublefx.blockchain.component.Blockchain;
 import com.doublefx.blockchain.component.block.Block;
 import com.doublefx.blockchain.component.block.BlockWithDifficultyInfo;
-import com.doublefx.blockchain.component.block.MessageBlock;
 import com.doublefx.blockchain.component.mining.MiningService;
-import com.doublefx.blockchain.example.virtualcoin.AccountHolder;
+import com.doublefx.blockchain.example.common.AccountHolder;
+import com.doublefx.blockchain.example.common.User;
 import com.doublefx.blockchain.util.SynchronizedLinkedList;
 
 import java.util.List;

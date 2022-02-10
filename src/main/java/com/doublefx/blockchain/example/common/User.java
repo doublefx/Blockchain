@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class User implements Serializable {
+public sealed class User implements Serializable permits ChatUser, AccountHolder {
 	@Serial
 	private static final long serialVersionUID = 1L;
 
@@ -21,8 +21,9 @@ public class User implements Serializable {
 				
 		not sent because of a wrong signature.%n""";
 
-	protected final           UUID                   uuid;
-	protected final           String                 userName;
+	protected final UUID   uuid;
+	protected final String userName;
+
 	protected final transient AsymmetricCryptography signature;
 
 	public User(String userName) {

@@ -1,5 +1,7 @@
 package com.doublefx.blockchain.example.virtualcoin;
 
+import com.doublefx.blockchain.example.common.AccountHolder;
+
 import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;

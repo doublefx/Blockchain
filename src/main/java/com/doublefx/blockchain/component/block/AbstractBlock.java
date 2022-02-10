@@ -1,7 +1,7 @@
 package com.doublefx.blockchain.component.block;
 
-import com.doublefx.blockchain.example.common.User;
 import com.doublefx.blockchain.component.mining.MiningTask.ProofOfWork;
+import com.doublefx.blockchain.example.common.User;
 
 import java.io.Serial;
 import java.math.BigInteger;
@@ -19,7 +19,7 @@ public abstract class AbstractBlock<T> implements Block<List<T>> {
 	protected static final String BLOCK_DESCRIPTION =
 		"""
 		Block:
-		Created by miner # %s
+		Created by: %s
 		Id: %s
 		Timestamp: %s
 		Magic number: %s

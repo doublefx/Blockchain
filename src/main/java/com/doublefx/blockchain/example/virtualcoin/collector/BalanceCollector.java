@@ -1,6 +1,6 @@
 package com.doublefx.blockchain.example.virtualcoin.collector;
 
-import com.doublefx.blockchain.example.virtualcoin.AccountHolder;
+import com.doublefx.blockchain.example.common.AccountHolder;
 import com.doublefx.blockchain.example.virtualcoin.Transaction;
 
 import java.math.BigDecimal;

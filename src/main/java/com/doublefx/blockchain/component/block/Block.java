@@ -1,7 +1,7 @@
 package com.doublefx.blockchain.component.block;
 
-import com.doublefx.blockchain.example.common.User;
 import com.doublefx.blockchain.component.mining.MiningTask;
+import com.doublefx.blockchain.example.common.User;
 
 import java.io.Serializable;
 import java.math.BigInteger;

@@ -1,12 +1,12 @@
 package com.doublefx.blockchain.example.virtualcoin;
 
+import com.doublefx.blockchain.example.common.AccountHolder;
 import com.doublefx.blockchain.example.virtualcoin.collector.BalanceCollector;
 import com.doublefx.blockchain.util.SynchronizedLinkedList;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
-import java.util.function.Supplier;
 import java.util.stream.IntStream;
 
 import static java.math.BigDecimal.valueOf;

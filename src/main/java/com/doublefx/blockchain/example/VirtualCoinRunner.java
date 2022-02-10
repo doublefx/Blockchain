@@ -1,4 +1,4 @@
-package com.doublefx.blockchain.stage;
+package com.doublefx.blockchain.example;
 
 import com.doublefx.blockchain.example.virtualcoin.Transaction;
 import com.doublefx.blockchain.example.virtualcoin.VirtualCoinNode;
@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 
 import static java.util.Optional.ofNullable;
 
-public class Stage6 {
+public class VirtualCoinRunner {
 	private static final VirtualCoinTransactionPool transactionPool = VirtualCoinTransactionPool.getInstance();
 
 	public static void run() {

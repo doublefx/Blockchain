@@ -1,5 +1,7 @@
 package com.doublefx.blockchain.example.chat;
 
+import com.doublefx.blockchain.example.common.ChatUser;
+
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Arrays;
