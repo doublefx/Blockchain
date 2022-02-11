@@ -97,7 +97,9 @@ You can import it into your favorite IDE or follow the instructions below to run
 
 ### Prerequisites
 
-[Install Java 17](https://docs.oracle.com/en/java/javase/17/install/installation-jdk-microsoft-windows-platforms.html)
+[Install JDK 17](https://docs.oracle.com/en/java/javase/17/install/installation-jdk-microsoft-windows-platforms.html)
+
+[Install Maven >= 3.8.x](https://maven.apache.org/download.cgi)
 
 ### Build and run
 
@@ -111,9 +113,13 @@ _Below is an example of how you can build and run the code. This implementation 
    ```sh
    cd Blockchain
    ```
-3. Compile and run `Main.java`
+3. Run the Maven build
    ```sh
-   java src/main/java/com/doublefx/blockchain/Main.java
+   mvn package
+   ```
+4. Run the built Jar
+   ```sh
+   java -jar target/blockchain-1.0-SNAPSHOT.jar
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -123,6 +129,7 @@ _Below is an example of how you can build and run the code. This implementation 
 
 - [x] Add MIT License
 - [x] Add README.md
+- [x] Add Maven support
 - [ ] Add a Kotlin version
 
 See the [open issues](https://github.com/doublefx/Blockchain/issues) for a full list of proposed features (and known issues).

@@ -79,3 +79,5 @@ gradle-app.setting
 /**/blockChain.bin
 /keys/
 /Blockchain/task/keys/
+
+/target/
