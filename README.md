@@ -83,7 +83,7 @@ Get a profound understanding of how blockchains work, apply your hashing and mul
 
 Here is the Java code of the project I created based on that with the blockchain code itself and 2 implementations as examples of how it could be used for:
 
-| [:speech_balloon: Chat System :speech_balloon:](https://github.com/doublefx/Blockchain/blob/master/src/main/java/com.doublefx/blockchain/example/ChatSystemRunner.java) | [:moneybag: Virtual Coin :moneybag:](https://github.com/doublefx/Blockchain/blob/master/src/main/java/com.doublefx/blockchain/example/VirtualCoinRunner.java) |
+| [:speech_balloon: Chat System :speech_balloon:](https://github.com/doublefx/Blockchain/blob/master/src/main/java/com/doublefx/blockchain/example/ChatSystemRunner.java) | [:moneybag: Virtual Coin :moneybag:](https://github.com/doublefx/Blockchain/blob/master/src/main/java/com/doublefx/blockchain/example/VirtualCoinRunner.java) |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <img src="images/ChatSystem.png" alt="Logo" width="400" height="640">                                                                                                   | <img src="images/VirtualCoin.png" alt="Logo" width="400" height="600">                                                                                        |
 
